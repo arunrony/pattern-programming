@@ -1,21 +1,21 @@
-star = 4
-n = 1
-count = star
+diamond = 50
+star_count = 1
+space = diamond
 reverse_count = False
-repeat = star % 2 == 0
+repeat = diamond % 2 == 0
 
-while n > 0:
-    if n == star:
+while star_count > 0:
+    if star_count == diamond:
         reverse_count = True
         if repeat:
-            print(count * " " + n * "* ")
+            print(space * " " + star_count * "* ")
             repeat = False
 
     if not reverse_count:
-        print(count * " " + n * "* ")
-        n = n + 1
-        count = count - 1
+        print(space * " " + star_count * "* ")
+        star_count = star_count + 1
+        space = space - 1
     else:
-        print(count * " " + n * "* ")
-        n = n - 1
-        count = count + 1
+        print(space * " " + star_count * "* ")
+        star_count = star_count - 1
+        space = space + 1
